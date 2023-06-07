@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863232887836",
+    "project_id": "fyp-project-15c41",
+    "storage_bucket": "fyp-project-15c41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863232887836:android:7ce72fbb5ad540553863d9",
+        "android_client_info": {
+          "package_name": "com.apps.kunalfarmah.omrscanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqNa_f84m2zmBGQuyrtYJpbQ8_pYrM2jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
