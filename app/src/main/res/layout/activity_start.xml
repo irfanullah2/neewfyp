@@ -14,49 +14,48 @@
         android:orientation="vertical">
 
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/Keyid"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/baseline_camera_alt_24"
+
+                android:text="Key"
+                android:textSize="20dp"
+                app:cornerRadius="15dp"
+                tools:ignore="UsingOnClickInXml">
+            </Button>
 
             <Button
-                android:id="@+id/scan"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="25dp"
-                android:background="@color/colorPrimary"
-                android:padding="15dp"
-               android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:text="Scan"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
+                android:id="@+id/Scanid"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
 
+                android:drawableLeft="@drawable/baseline_camera_alt_24"
+                android:text="Exam"
 
-                />
+                android:textSize="20dp"
+                app:cornerRadius="15dp">
 
-            <Button
-                android:id="@+id/setAnswers"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_below="@id/scan"
-                android:layout_marginTop="15dp"
-                android:background="@color/colorPrimary"
-                android:layout_marginLeft="40dp"
-                android:padding="15dp"
-                android:textAllCaps="false"
-                android:text="KEY"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
+            </Button>
 
 
 
 
 
         </LinearLayout>
+
+
 
 
 
@@ -71,18 +70,23 @@
 
 
             <Button
-                android:id="@+id/Logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="20dp"
-                android:layout_margin="15dp"
-                android:padding="15dp"
-                android:background="@color/colorPrimary"
-                android:textAllCaps="false"
-                android:text="Logout"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:id="@+id/Settingid"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="100dp"
+
+                android:drawableLeft="@drawable/baseline_settings_24"
+                android:text="Settings"
+
+                android:textSize="20dp"
+                app:cornerRadius="15dp">
+
+            </Button>
+
+
+
+
 
 
 

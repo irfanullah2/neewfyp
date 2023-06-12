@@ -4,6 +4,7 @@
     package="com.apps.kunalfarmah.omrscanner">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -17,16 +18,22 @@
         android:theme="@style/AppTheme"
         tools:targetApi="q">
         <activity
-            android:name=".SignupActivity"
-            android:label="MCQ CHECHKER"
+            android:name=".LoginwithGoogle"
             android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"
+            android:label="MCQ CHECHKER" />
         <activity
             android:name=".LoginActivity"
-            android:label=""
-            android:exported="false" />
+            android:exported="false"
+            android:label="MCQ CHECKER" />
         <activity
             android:name=".screenActivity"
-            android:label="">
+            android:label="MCQ CHECKER">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,10 +42,10 @@
         </activity>
         <activity
             android:name=".AnswersActivity"
-            android:label="" />
+            android:label="MCQ CHECKER" />
         <activity
             android:name=".StartActivity"
-            android:label="" />
+            android:label="MCQ CHECKER" />
         <activity android:name=".Results" />
 
         <provider

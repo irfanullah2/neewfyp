@@ -22,7 +22,6 @@ public class screenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen);
 
-
         mImageView = findViewById(R.id.my_image);
         mTextView = findViewById(R.id.my_text);
 

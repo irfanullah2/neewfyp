@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.apps.kunalfarmah.omrscanner.databinding.ActivityLoginBinding;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
 
+    Button google;
     ActivityLoginBinding binding;
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
@@ -30,6 +32,22 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
+
+        google = findViewById(R.id.google);
+
+
+
+
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(LoginActivity.this,LoginwithGoogle.class);
+                startActivity(i);
+            }
+        });
+
+
 
 
         binding.login.setOnClickListener(new View.OnClickListener() {

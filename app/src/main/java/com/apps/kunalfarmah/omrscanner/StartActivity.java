@@ -14,7 +14,7 @@ import com.google.firebase.ktx.Firebase;
 
 public class StartActivity extends AppCompatActivity {
 
-    Button scan,logout, answer;
+    Button scan,setting, answer;
     boolean isCamera = true;
 
     FirebaseAuth Firebase =FirebaseAuth.getInstance();
@@ -22,9 +22,18 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        scan = findViewById(R.id.scan);
-        answer = findViewById(R.id.setAnswers);
-        logout = findViewById(R.id.Logout);
+        scan = findViewById(R.id.Scanid);
+        answer = findViewById(R.id.Keyid);
+        setting = findViewById(R.id.Settingid);
+
+
+
+
+
+
+
+
+
         scan.setOnClickListener(v -> {
             Dialog dialog = new Dialog(StartActivity.this);
             dialog.setContentView(R.layout.selection_dialog);
@@ -34,7 +43,16 @@ public class StartActivity extends AppCompatActivity {
 //            openActivity();
         });
 
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(StartActivity.this,SettingActivity.class);
+                startActivity(i);
 
+
+            }
+        });
+/*
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +65,7 @@ public class StartActivity extends AppCompatActivity {
 
             }
         });
-
+*/
 
         answer.setOnClickListener(v -> startActivity(new Intent(StartActivity.this, AnswersActivity.class)));
     }

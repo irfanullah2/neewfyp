@@ -1,14 +1,10 @@
 <resources>
 
 
-
-
-
-
-
-
     <string name="app_name">MCQS CHECKER</string>
     <string name="project_name">MCQS CHECHKER</string>
 
+
+    <string name="google_web_client_id">863232887836-vnhp5omskbh9f17m2jhuvm047qlhn496.apps.googleusercontent.com</string>
 
 </resources>
