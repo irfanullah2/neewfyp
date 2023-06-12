@@ -8,18 +8,29 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.apps.kunalfarmah.omrscanner.databinding.ActivityLoginBinding;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
 
-    Button google;
+    GoogleSignInOptions gso;
+
+    GoogleSignInClient gsc;
+
+
     ActivityLoginBinding binding;
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
@@ -33,19 +44,10 @@ public class LoginActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
 
-        google = findViewById(R.id.google);
 
 
 
 
-        google.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent i = new Intent(LoginActivity.this,LoginwithGoogle.class);
-                startActivity(i);
-            }
-        });
 
 
 
@@ -112,7 +114,14 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
+
+
+
     }
+
+
+
+
 
     @Override
     //Check if already Login then go to HomePAGE

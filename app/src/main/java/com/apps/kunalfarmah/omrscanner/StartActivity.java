@@ -9,12 +9,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.ktx.Firebase;
 
 public class StartActivity extends AppCompatActivity {
 
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
+
     Button scan,setting, answer;
+
     boolean isCamera = true;
 
     FirebaseAuth Firebase =FirebaseAuth.getInstance();
@@ -25,9 +33,6 @@ public class StartActivity extends AppCompatActivity {
         scan = findViewById(R.id.Scanid);
         answer = findViewById(R.id.Keyid);
         setting = findViewById(R.id.Settingid);
-
-
-
 
 
 
@@ -52,6 +57,7 @@ public class StartActivity extends AppCompatActivity {
 
             }
         });
+
 /*
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +75,8 @@ public class StartActivity extends AppCompatActivity {
 
         answer.setOnClickListener(v -> startActivity(new Intent(StartActivity.this, AnswersActivity.class)));
     }
+
+
 
     public void openActivity(){
         Intent intent = new Intent(StartActivity.this,MainActivity.class);
