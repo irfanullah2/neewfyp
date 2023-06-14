@@ -3,12 +3,14 @@ package com.apps.kunalfarmah.omrscanner;
 import android.app.Dialog;
 import android.content.Intent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,8 +20,8 @@ import com.google.firebase.ktx.Firebase;
 
 public class StartActivity extends AppCompatActivity {
 
-    GoogleSignInOptions gso;
-    GoogleSignInClient gsc;
+
+
 
     Button scan,setting, answer;
 
@@ -33,7 +35,6 @@ public class StartActivity extends AppCompatActivity {
         scan = findViewById(R.id.Scanid);
         answer = findViewById(R.id.Keyid);
         setting = findViewById(R.id.Settingid);
-
 
 
 
@@ -75,6 +76,7 @@ public class StartActivity extends AppCompatActivity {
 
         answer.setOnClickListener(v -> startActivity(new Intent(StartActivity.this, AnswersActivity.class)));
     }
+
 
 
 

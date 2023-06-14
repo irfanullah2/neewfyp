@@ -16,5 +16,9 @@
         <item name="android:textColorPrimary">#FFFFFF</item>
 
     </style>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize other style attributes if needed -->
+    </style>
+
 
 </resources>
